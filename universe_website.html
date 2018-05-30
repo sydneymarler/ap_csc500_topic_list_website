@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-pre, .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.bgimg-pre {
+  background-image: url("telescope.jpg");
+  min-height: 100%;
+}
+
+.bgimg-1 {
+  background-image: url("earth.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("solar_system.jpg");
+  min-height: 100%;
+}
+
+.bgimg-3 {
+  background-image: url("localstars.jpg");
+  min-height: 100%;
+}
+
+.bgimg-4 {
+  background-image: url("milky-way.jpg");
+  min-height: 100%;
+}
+
+.bgimg-5 {
+  background-image: url("local-group.jpg");
+  min-height: 100%;
+}
+
+.bgimg-6 {
+  background-image: url("universe-map.jpg");
+  min-height: 100%;
+}
+
+.bgimg-7 {
+  background-image: url("blue-dot.jpg");
+  min-height: 100%;
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption2 {
+  position: absolute;
+  left: 0;
+  top: 75%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.caption2 span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  /* text-transform: uppercase; */
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg-pre">
+  <div class="caption">
+    <span class="border">THE UNIVERSE</span>
+  </div>
+  <div class="caption2">
+    <span class="border">SYDNEY MARLER</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">WELCOME</h3>
+  <p><a href="#solar_sys">CLICK HERE</a>This is a tour of the universe,
+    beginning at Earth and ending at the edge of the obervable universe. Scroll down to begin!</p>
+</div>
+
+<div class="bgimg-1" id="section2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">PLANET EARTH</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>The Earth is the only planet in
+      the universe to harbor life (that we know of today). Earth contains about
+      70% water, the rest is terrestrial, but both regions are filled with life.
+      Earth is approximately 4.5 billion years old.
+      Earth is the third planet from the sun. Its tilted axis creates seasons.
+      A year on Earth is approximately 365 days.</h3>
+  <p></p>
+  </div>
+</div>
+
+<a name="solar_sys"></a>
+<div class="bgimg-2" id="section2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">THE SOLAR SYSTEM</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>If an astronomical unit (a.u.) is the distance
+    of the Earth to the sun, the end of the solar system is 125 a.u. away from
+    the Earth.
+     "The solar system consists of the Sun; the eight official planets, at
+      least three 'dwarf planets', more than 130 satellites of the planets, a
+      large number of small bodies (the comets and asteroids), and the
+      interplanetary medium." -(nineplanets.org) There are potentially many
+    more planetary satellites that have yet to be discovered.</h3>
+  <p></p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LOCAL STAR CLUSTER</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>The nearest star to Earth is Alpha Centauri, a three-star system 4.367
+      light years away. With current technology, it would take over 100 years to
+      reach. Anothe local star is a red giant, Betelguese, which is
+      approximately 650 light years from Earth. At the end of its life,
+      Betelguese is likely to become a supernova soon. The light, of course,
+      would not reach the Earth until 650 years after the explosion.</h3>
+  <p></p>
+  </div>
+</div>
+
+<div class="bgimg-4">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">THE MILKY WAY GALAXY</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>The local star cluster exists in just one arm of the Milky Way galaxy, far removed from the
+      center, which is filled with dense star clusters. At the center of the
+      Milky Way is a supermassive blackhole which gravitationally attracts stars
+      and other celestial objects. The Milky Way is over 100,000 light years across.</h3>
+  <p></p>
+  </div>
+</div>
+
+<div class="bgimg-5">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LOCAL GROUP</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Including the Milky Way, there are approximately 55 galaxies that make
+      up the Local Group. The local group is over 10 million light years in
+      diameter. (Wikipedia) The Milky Way has numerous satellite galaxies that
+      orbit around it. The nearest supermassive galaxy to the Milky Way Galaxy
+      is the Andromeda Galaxy. The two are set to eventually merge. </h3>
+  <p></p>
+  </div>
+</div>
+
+<div class="bgimg-6">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">A MAP OF THE UNIVERSE</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>"This map attempts to show the entire visible Universe. The galaxies in
+      the universe tend to collect into vast sheets and superclusters of
+      galaxies surrounding large voids giving the universe a cellular appearance.
+      Because light in the universe only travels at a fixed speed, we see objects
+      at the edge of the universe when it was very young up to 14 billion years
+      ago." - AtlasOfTheUniverse.com</h3>
+  <p></p>
+  </div>
+</div>
+
+<div class="bgimg-7">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">...AND BACK TO PLANET EARTH</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>"Look again at that dot. That's here. That's home.
+      That's us. On it everyone you love, everyone you know, everyone you ever
+      heard of, every human being who ever was, lived out their lives...Our
+      posturings, our imagined self-importance, the delusion that we have some
+      privileged position in the Universe, are challenged by this point of pale
+      light. It has been said that astronomy is a humbling and
+      character-building experience. To me, it underscores our responsibility
+      to deal more kindly with one another, and to preserve and cherish the
+      pale blue dot, the only home we've ever known." -Carl Sagan</h3>
+  <p></p>
+  </div>
+</div>
+
+
+</body>
+</html>
